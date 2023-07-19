@@ -78,7 +78,7 @@
     right: 0;
     width: 42px;
     height: 42px;
-    background: url("../../img/sprite/accordion-open.svg") no-repeat;
+    background: url("../img/sprite/accordion-open.svg") no-repeat;
     background-size: cover;
     transform: translate(0, -50%);
 
@@ -96,19 +96,19 @@
 
   @include hover-focus {
     &::after {
-      background: url("../../img/sprite/accordion-hover.svg") no-repeat;
+      background: url("../img/sprite/accordion-hover.svg") no-repeat;
     }
   }
 
   &:disabled {
-    background: url("../../img/sprite/accordion-disabled.svg") no-repeat;
+    background: url("../img/sprite/accordion-disabled.svg") no-repeat;
     pointer-events: none;
   }
 }
 
 .accordion__element.is-active .accordion__button {
   &::after {
-    background: url("../../img/sprite/accordion-close.svg") no-repeat;
+    background: url("../img/sprite/accordion-close.svg") no-repeat;
 
     @include vp-1199 {
       top: 60%;
