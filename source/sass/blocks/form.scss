@@ -14,12 +14,12 @@
 }
 
 .form-wrapper {
-  padding: 56px 170px 68px 102px;
+  padding: 56px 170px 65px 102px;
   background-color: $color-Sapphire;
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 54px 163px 66px 132px;
+    padding: 54px 163px 68px 132px;
   }
 
   @include vp-767 {

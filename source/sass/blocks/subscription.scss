@@ -1,11 +1,14 @@
-.subscription__wrapper {
+.subscription {
   position: relative;
+  background-color: $color-ghost-white;
+}
+
+.subscription__wrapper {
   margin: 0 auto;
-  padding: 143px 103px 118px;
+  padding: 143px 20px 118px;
   max-width: 1366px;
   width: 100%;
   z-index: 1;
-  background-color: $color-ghost-white;
 
   @include vp-1199 {
     padding: 114px 163px 100px;
@@ -34,6 +37,16 @@
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 25px;
+  }
+}
+
+.subscription__tabs {
+  margin: 0 auto;
+  width: 1160px;
+
+  @include vp-1199 {
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -93,6 +106,18 @@
 
   @include vp-767 {
     font-size: 16px;
+  }
+
+  @include hover-focus {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 3px;
+      width: calc(100% - 5px);
+      height: 2px;
+      background-color: $colot-crimson;
+    }
   }
 }
 
@@ -158,7 +183,6 @@
 
   @include hover-focus {
     border-image-source: $subscription-btn;
-    padding: 55px 70px 55px;
   }
 }
 
@@ -245,14 +269,18 @@
   @include hover-focus {
     color: $color-default-white;
     background: $subscription-btn;
-    padding: 21px 42px 21px;
+    padding: 22px 44px 22px;
+    border: none;
+    outline: none;
   }
 }
 
 .subscription__element-list:hover .subscription__button {
   background: $subscription-btn;
   color: $color-default-white;
-  padding: 21px 42px 21px;
+  padding: 22px 44px 22px;
+  border: none;
+  outline: none;
 }
 
 .subscription__element-list:active .subscription__button {
