@@ -1,0 +1,158 @@
+.footer__wrapper {
+  background-color: $black-russian;
+  color: $color-default-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 41px 104px 39px 102px;
+
+  @include vp-1199 {
+    padding: 47px 45px 42px 45px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 48px 15px 51px;
+  }
+}
+
+.footer__navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 40px;
+  padding-left: 11px;
+
+  @include vp-1199 {
+    gap: 30px;
+    padding-left: 16px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding-left: 0;
+    columns: 2;
+    margin-top: -17px;
+    margin-bottom: 17px;
+  }
+}
+
+.footer__navigation a {
+  position: relative;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    letter-spacing: 1.1px;
+  }
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-default-white;
+    outline-offset: 5px;
+
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &:active {
+    outline: none;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.footer__link--disabled {
+  pointer-events: none;
+  cursor: none;
+  opacity: 0.4;
+}
+
+.footer__socials ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 11px;
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  border: none;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-egyptian-blue;
+    fill: $color-default-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-Sapphire;
+    fill: $color-default-white;
+  }
+
+  &:disabled {
+    background-color: $color-default-white;
+    fill: $black-russian;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+.footer__socials-list svg {
+  width: 14px;
+  height: 14px;
+}
+
+.footer__logo {
+  padding-top: 10px;
+
+  @include vp-1199 {
+    padding-top: 3px;
+  }
+}
+
+.footer__navigation .footer__item--first {
+  @include vp-767 {
+    margin-top: 40px;
+  }
+}
+
+.footer__navigation li {
+  @include vp-767 {
+    margin-bottom: 16px;
+    margin-right: 10px;
+  }
+}

@@ -4,6 +4,9 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
+@import "vendor/data-tabs.scss";
+@import "vendor/swiper.scss";
+@import "vendor/data-accordion.scss";
 
 // Global
 // ---------------------------------
@@ -18,11 +21,23 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/btn.scss";
+@import "blocks/main-header.scss";
+@import "blocks/hero.scss";
+@import "blocks/gym.scss";
+@import "blocks/video.scss";
+@import "blocks/subscription.scss";
+@import "blocks/promo.scss";
+@import "blocks/coaches.scss";
+@import "blocks/advantages.scss";
+@import "blocks/stocks.scss";
+@import "blocks/faq.scss";
+@import "blocks/accordion.scss";
+@import "blocks/feedback.scss";
+@import "blocks/form.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";
 @import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
 
 // ---------------------------------
 

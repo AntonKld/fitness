@@ -1,0 +1,125 @@
+.gym__wrapper {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  column-gap: 5%;
+  padding: 120px 103px 6px 163px;
+
+  @include vp-1199 {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 103px 45px 17px;
+  }
+
+  @include vp-767 {
+    padding: 61px 0 70px;
+  }
+}
+
+.gym__description {
+  grid-column: 1/2;
+  grid-row: 1/4;
+
+  @include vp-1199 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 43px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 34px 15px;
+    text-align: inherit;
+  }
+}
+
+.gym__description h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: $color-Sapphire;
+  letter-spacing: 1.44px;
+  line-height: 45px;
+  margin: 0;
+  margin-bottom: 14px;
+  padding-top: 45px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    padding: 0;
+    margin-bottom: 2px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    margin-bottom: 1px;
+  }
+}
+
+.gym__description span {
+  font-family: $ff-roboto-condensed;
+  color: $color-Sapphire;
+  display: block;
+  margin-bottom: 39px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  @include vp-1199 {
+    margin-bottom: 34px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 23px;
+  }
+}
+
+.gym__description p {
+  color: $color-Sapphire;
+  font-family: $ff-roboto-condensed;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  margin-top: 8px;
+
+  @include vp-1199 {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding-right: 27px;
+  }
+}
+
+.gym__description p + p {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.gym__snapshot {
+  width: 100%;
+  grid-column: 2/3;
+
+  @include vp-1199 {
+    align-self: center;
+  }
+}
+
+.gym__snapshot img {
+  background-color: $color-default-black;
+
+  @include vp-1199 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 678/345;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320/313;
+  }
+}

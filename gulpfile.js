@@ -14,7 +14,7 @@ const clean = () => del('build');
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,
@@ -23,6 +23,7 @@ const syncServer = () => {
 
   gulp.watch('source/**.html', gulp.series(copy, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', streamStyles);
+  gulp.watch('source/js/**/*.{js,json}', gulp.series(compileMainScripts, compileVendorScripts, refresh));
   gulp.watch('source/js/**/*.{js,json}', gulp.series(compileMainScripts, compileVendorScripts, refresh));
   gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));
   gulp.watch('source/img/**/*.svg', gulp.series(copySvg, sprite, refresh));

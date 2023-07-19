@@ -1,0 +1,156 @@
+.contacts {
+  border-top: 1px solid $light-slategrey;
+  padding: 57px 60px 60px 98px;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    padding-left: 106px;
+    padding-top: 63px;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 61px;
+  }
+}
+
+.contacts h2 {
+  color: $color-Sapphire;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: 1.62px;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 36px;
+  margin-left: 21px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin-bottom: 33px;
+    margin-left: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 1.1px;
+    margin-bottom: 34px;
+    margin-left: 0;
+  }
+}
+
+.contacts ul {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 14px;
+  margin: 0;
+  margin-left: 26px;
+
+  @include vp-1199 {
+    column-gap: 54px;
+    row-gap: 19px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    background-color: $light-slategrey;
+    top: 7px;
+    bottom: 9px;
+    left: 46%;
+    transform: translateX(-50%);
+
+    @include vp-1199 {
+      left: 46.5%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts h3 {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-roboto-condensed;
+  color: $color-Sapphire;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 4px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__item {
+  max-width: 190px;
+
+  @include vp-1199 {
+    max-width: 220px;
+  }
+}
+
+.contacts__item--phone {
+  max-width: 102px;
+
+  @include vp-1199 {
+    max-width: 220px;
+  }
+
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.contacts__item--email {
+  @include vp-767 {
+    order: 4;
+    margin-top: -3px;
+  }
+}
+
+.contacts p {
+  max-width: 170px;
+  margin: 0;
+  padding: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21.33px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    font-size: 18px;
+  }
+}
+
+.contacts a {
+  max-width: 170px;
+  margin: 0;
+  padding: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21.33px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    font-size: 18px;
+  }
+}
