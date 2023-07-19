@@ -2129,6 +2129,7 @@ button,
   .video__button:hover:not(.focus-visible) {
     background-position: -130px -130px;
     background-repeat: no-repeat;
+    outline: none;
   }
 }
 @media (hover: hover) and (max-width: 1199px) {
@@ -2139,6 +2140,7 @@ button,
 .video__button.focus-visible:focus {
   background-position: -130px -130px;
   background-repeat: no-repeat;
+  outline: none;
 }
 @media (max-width: 1199px) {
   .video__button.focus-visible:focus {

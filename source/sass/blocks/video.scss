@@ -71,6 +71,7 @@
   @include hover-focus {
     background-position: -130px -130px;
     background-repeat: no-repeat;
+    outline: none;
 
     @include vp-1199 {
       background-position: -94px -94px;
