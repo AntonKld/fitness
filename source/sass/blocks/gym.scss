@@ -57,17 +57,18 @@
   }
 }
 
-.gym__description span {
+.gym__description h3 {
   font-family: $ff-roboto-condensed;
   color: $color-Sapphire;
   display: block;
-  margin-bottom: 39px;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
+  margin: 0;
+  margin-bottom: 39px;
 
   @include vp-1199 {
-    margin-bottom: 34px;
+    margin-bottom: 33px;
   }
 
   @include vp-767 {

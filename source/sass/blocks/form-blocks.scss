@@ -1,0 +1,14 @@
+.form-blocks {
+  border-top: 1px solid $light-slategrey;
+  background: linear-gradient(to right, $color-Sapphire 50%, $color-default-white 50%);
+}
+
+.form-blocks__contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}

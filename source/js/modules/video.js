@@ -1,43 +1,30 @@
-const videoElement = document.querySelector('[data-video]');
-const link = videoElement.querySelector('[data-video-link]');
-const button = videoElement.querySelector('[data-video-button]');
+const playButton = document.querySelector('.video__button');
+const link = document.querySelector('.video__link');
+const video = document.querySelector('.video');
+const videoIframe = video.querySelector('[data-video-container]');
 
-const generateURL = () => {
-  if (!videoElement) {
-    return '';
+// eslint-disable-next-line consistent-return
+const createIframe = (block) => {
+  if (video !== null) {
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('width', 364);
+    iframe.setAttribute('height', 228);
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', block.dataset.src);
+
+    return iframe;
   }
-
-  let url = videoElement.getAttribute('data-url');
-  let query = '?rel=0&showinfo=0&autoplay=1&mute=1';
-  return 'https://www.youtube.com/embed/' + url + query;
 };
 
-const setupVideo = () => {
-  if (!button) {
-    return;
-  }
-  button.style.display = 'block';
-
-  button.addEventListener('click', () => {
-    let iframe = createIframe();
-
-    link.remove();
-    button.remove();
-    videoElement.appendChild(iframe);
-  });
-
+export const initPlayVideo = () => {
   link.removeAttribute('href');
+  playButton.addEventListener('click', () => {
+    if (video && videoIframe) {
+      playButton.remove();
+      link.remove();
+      const newIframe = createIframe(videoIframe);
+      videoIframe.append(newIframe);
+    }
+  });
 };
-
-const createIframe = () => {
-  const iframe = document.createElement('iframe');
-
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('src', generateURL());
-  iframe.setAttribute('frameborder', '0');
-  iframe.classList.add('video__iframe');
-
-  return iframe;
-};
-
-export {setupVideo};

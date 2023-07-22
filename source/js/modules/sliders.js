@@ -2,7 +2,7 @@ import Swiper from '../vendor/swiper';
 
 const swiperContainer = document.querySelectorAll('[data-swiper]');
 
-const coachesSlider = () => {
+const initCoachesSlider = () => {
   if (!swiperContainer) {
     return;
   } else {
@@ -40,7 +40,7 @@ const coachesSlider = () => {
   }
 };
 
-const feedbackSlider = () => {
+const initFeedbackSlider = () => {
   if (!swiperContainer) {
     return;
   } else {
@@ -59,4 +59,4 @@ const feedbackSlider = () => {
   }
 };
 
-export {coachesSlider, feedbackSlider};
+export {initCoachesSlider, initFeedbackSlider};

@@ -228,6 +228,29 @@
   margin: 0;
   margin-bottom: 34px;
 
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+    color: $color-whisper;
+    opacity: 0.48;
+    z-index: -1;
+    display: block;
+    width: auto;
+
+    @include vp-767 {
+      top: 7%;
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+
   @include vp-767 {
     font-size: 48px;
     line-height: 48px;

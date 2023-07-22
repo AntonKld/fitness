@@ -3,7 +3,7 @@
   position: relative;
 
   @include vp-1199 {
-    padding: 48px 100px 102px;
+    padding: 48px 100px 100px;
   }
 
   @include vp-767 {
@@ -26,7 +26,7 @@
   letter-spacing: 0.03em;
 
   @include vp-1199 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     text-align: center;
     font-size: 42px;
     line-height: 50px;
@@ -76,59 +76,41 @@
   }
 }
 
-.coaches__item h3 {
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  font-family: $ff-roboto-condensed;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 29px;
-  color: $color-default-white;
-  text-align: center;
-}
-
 .coaches__description {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scrollbar-width: none;
   width: 100%;
   height: 100%;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 51px;
-  background: rgba(16, 38, 84, 0.89);
+  padding-bottom: 22px;
+  display: flex;
+  justify-content: flex-end;
+
+  @include vp-1199 {
+    padding-bottom: 23px;
+    padding-left: 30px;
+  }
+
+  @include hover-focus {
+    background: rgba(16, 38, 84, 0.89);
+    justify-content: flex-start;
+    display: initial;
+
+    overflow-y: auto;
+    overflow-x: visible;
+  }
 
   @include vp-767 {
     padding-top: 41px;
   }
-}
-
-.coaches__item:hover .coaches__description,
-.coaches__item:focus .coaches__description,
-.coaches__item:focus-visible .coaches__description {
-  display: flex;
-  z-index: 2;
-  overflow-y: auto;
-  overflow-x: visible;
-}
-
-.coaches__item:hover h3,
-.coaches__item:focus h3,
-.coaches__item:focus-visible h3 {
-  z-index: -2;
 }
 
 .coaches__item:hover img,
@@ -137,7 +119,7 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.coaches__description h4 {
+.coaches__description h3 {
   margin: 0;
   padding: 0;
 
@@ -150,16 +132,22 @@
 }
 
 .coaches__description p {
+  display: initial;
+  justify-content: center;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   padding: 0;
-
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: $color-spindle;
   text-align: center;
+
+  @include vp-1199 {
+    line-height: 110%;
+    margin-bottom: 36px;
+  }
 }
 
 .coaches__description ul {
@@ -171,6 +159,10 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
+
+  @include vp-1199 {
+    padding-left: 53px;
+  }
 
   @include vp-767 {
     padding-left: 25px;
@@ -195,6 +187,42 @@
     background-color: $color-default-white;
     border-radius: 50%;
   }
+}
+
+.coaches__description h3 ~ * {
+  display: none;
+
+  @include hover-focus {
+    display: initial;
+  }
+}
+
+.coaches__item:hover .coaches__description h3 ~ *,
+.coaches__item:focus .coaches__description h3 ~ * {
+  display: flex;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.coaches__description:hover {
+  background: rgba(16, 38, 84, 0.89);
+  justify-content: flex-start;
+
+  @include vp-1199 {
+    padding-left: 19px;
+    padding-top: 52px;
+  }
+
+  @include vp-767 {
+    padding-left: 25px;
+    padding-top: 42px;
+  }
+}
+
+.coaches__description:focus {
+  overflow-x: visible;
+  background: rgba(16, 38, 84, 0.89);
+  justify-content: flex-start;
 }
 
 .coaches__button {

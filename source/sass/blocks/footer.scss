@@ -1,4 +1,5 @@
 .footer {
+  flex: 1;
   background-color: $black-russian;
 }
 
@@ -8,11 +9,11 @@
   color: $color-default-white;
   display: flex;
   justify-content: space-between;
-  padding: 41px 104px 39px 102px;
+  padding: 41px 104px 26px 102px;
   margin: 0 auto;
 
   @include vp-1199 {
-    padding: 46px 46px 42px 45px;
+    padding: 46px 45px 42px 45px;
   }
 
   @include vp-767 {
@@ -32,14 +33,14 @@
 
   @include vp-1199 {
     gap: 30px;
-    padding-left: 18px;
+    padding-left: 15px;
   }
 
   @include vp-767 {
     display: block;
     padding-left: 0;
     columns: 2;
-    margin-top: -17px;
+    margin-top: -34px;
     margin-bottom: 17px;
   }
 }
@@ -143,10 +144,22 @@
 }
 
 .footer__logo {
-  padding-top: 10px;
+  padding-top: 1px;
 
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+}
+
+.footer__logo svg {
   @include vp-1199 {
-    padding-top: 3px;
+    width: 82px;
+    height: 18px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    height: 15px;
   }
 }
 

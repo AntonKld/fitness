@@ -11,7 +11,7 @@
 
   @include vp-767 {
     background: $main-header-mobile;
-    padding: 15px 0 79px;
+    padding: 14px 0 79px;
   }
 }
 
@@ -60,14 +60,12 @@
 }
 
 .main-header__logo {
-  padding-top: 9px;
-
   @include vp-1199 {
     padding-top: 2px;
   }
 
   @include vp-767 {
-    padding-top: 6px;
+    padding-top: 1px;
   }
 }
 

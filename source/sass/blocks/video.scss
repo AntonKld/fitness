@@ -60,6 +60,7 @@
   background: url("../img/sprite/video-button.png") -130px -10px;
   background-repeat: no-repeat;
   border: none;
+  z-index: 3;
 
   @include vp-1199 {
     width: 73px;
