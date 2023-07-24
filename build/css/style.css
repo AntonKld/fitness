@@ -3222,6 +3222,10 @@ button,
   stroke: #ffffff;
 }
 
+.advantages {
+  background-color: #f8f9fc;
+}
+
 .advantages__container {
   padding: 129px 153px 122px;
   background-color: #f8f9fc;
