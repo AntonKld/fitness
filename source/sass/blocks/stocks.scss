@@ -27,7 +27,7 @@
   @include vp-767 {
     font-size: 32px;
     letter-spacing: 0.96px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 }
 
@@ -92,6 +92,8 @@
   @include vp-767 {
     text-align: center;
     align-items: center;
+    padding-top: 35px;
+    padding-bottom: 39px;
   }
 }
 

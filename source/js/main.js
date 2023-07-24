@@ -1,10 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {initPlayVideo} from './modules/video';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './vendor/init-tabs';
 import {initCoachesSlider, initFeedbackSlider} from './modules/sliders';
 import {initAccordions} from './vendor/init-accordion';
+import './modules/video.js';
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
-    initPlayVideo();
     initCoachesSlider();
     initFeedbackSlider();
     initAccordions();

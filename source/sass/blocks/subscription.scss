@@ -149,7 +149,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 42px;
+  gap: 40px;
 
   @include vp-1199 {
     gap: 39px;
@@ -164,6 +164,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 360px;
   padding: 55px 70px 60px;
   z-index: 2;
   overflow: hidden;
@@ -279,7 +280,7 @@
 }
 
 .subscription__button {
-  padding: 20px 42px 20px;
+  padding: 18px 42px 20px;
   color: $color-Sapphire;
   border: 2px solid $color-Sapphire;
   display: inline-flex;

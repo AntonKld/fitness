@@ -1,3 +1,7 @@
+.faq {
+  background-color: $color-ghost-white;
+}
+
 .faq__wrapper {
   background-color: $color-ghost-white;
   padding: 142px 103px 121px;
@@ -51,10 +55,11 @@
   @include vp-1199 {
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   @include vp-767 {
+    margin-bottom: 29px;
     gap: 8px;
   }
 }

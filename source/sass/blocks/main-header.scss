@@ -1,5 +1,5 @@
 .main-header {
-  padding: 30px 0 20px;
+  padding: 31px 0 20px;
   background: $main-header-desktop;
   color: $color-default-white;
   flex-shrink: 0;
@@ -60,6 +60,8 @@
 }
 
 .main-header__logo {
+  padding-top: 8px;
+
   @include vp-1199 {
     padding-top: 2px;
   }
@@ -69,10 +71,11 @@
   }
 }
 
-.main-header__logo svg {
+.main-header__logo img {
   @include vp-1199 {
     width: 82px;
     height: 17px;
+    object-fit: contain;
   }
 
   @include vp-767 {

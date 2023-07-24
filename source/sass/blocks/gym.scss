@@ -1,15 +1,16 @@
 .gym__wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 35% 1fr;
   column-gap: 5%;
-  padding: 120px 103px 6px 163px;
+  padding: 120px 103px 235px 163px;
 
   @include vp-1199 {
     display: flex;
     gap: 0;
     align-items: center;
     flex-direction: column;
-    padding: 103px 45px 17px;
+    padding: 104px 45px 183px;
   }
 
   @include vp-767 {
@@ -121,6 +122,93 @@
   }
 
   @include vp-767 {
+    margin-bottom: 40px;
     aspect-ratio: 320/313;
+  }
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  top: 408px;
+  left: 540px;
+
+  @include vp-1199 {
+    top: auto;
+    left: 251px;
+    bottom: 100px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+  }
+}
+
+.gym__video {
+  width: 364px;
+  height: 228px;
+  object-fit: cover;
+  background-color: $color-default-black;
+  aspect-ratio: 364 / 228;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+    aspect-ratio: 266 / 167;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    height: 167px;
+    aspect-ratio: 320 / 167;
+  }
+}
+
+.gym__video-btn {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: url("../img/sprite/video-button.png") -130px -10px;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 2px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+    background-position: -94px -7px;
+    background-size: 174px 175px;
+  }
+
+  @include hover-focus {
+    background-position: -130px -130px;
+    background-repeat: no-repeat;
+    outline: none;
+
+    @include vp-1199 {
+      background-position: -94px -94px;
+    }
+  }
+
+  &:active {
+    background-position: -10px -10px;
+
+    @include vp-1199 {
+      background-position: -7px -7px;
+    }
+  }
+}
+
+.gym__video-btn:disabled {
+  background-position: -10px -130px;
+
+  @include vp-1199 {
+    background-position: -7px -94px;
   }
 }

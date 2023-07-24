@@ -1,7 +1,7 @@
 .promo__wrapper {
   display: grid;
   grid-template-columns: 43% 1fr;
-  padding: 120px 103px 100px;
+  padding: 121px 103px 100px;
 
   @include vp-1199 {
     padding: 100px 45px 52px;

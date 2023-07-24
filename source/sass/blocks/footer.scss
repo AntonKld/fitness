@@ -9,7 +9,7 @@
   color: $color-default-white;
   display: flex;
   justify-content: space-between;
-  padding: 41px 104px 26px 102px;
+  padding: 40px 104px 40px 102px;
   margin: 0 auto;
 
   @include vp-1199 {
@@ -40,7 +40,7 @@
     display: block;
     padding-left: 0;
     columns: 2;
-    margin-top: -34px;
+    margin-top: -26px;
     margin-bottom: 17px;
   }
 }
@@ -144,17 +144,22 @@
 }
 
 .footer__logo {
-  padding-top: 1px;
+  padding-top: 9px;
+
+  @include vp-1199 {
+    padding-top: 2px;
+  }
 
   @include vp-767 {
     margin-bottom: 8px;
   }
 }
 
-.footer__logo svg {
+.footer__logo img {
   @include vp-1199 {
     width: 82px;
     height: 18px;
+    object-fit: contain;
   }
 
   @include vp-767 {
