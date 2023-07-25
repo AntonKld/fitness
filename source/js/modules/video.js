@@ -1,9 +1,8 @@
 const playButton = document.querySelector('.video__button');
 const link = document.querySelector('.video__link');
 const video = document.querySelector('.video');
-const videoIframe = video.querySelector('[data-video-container]');
+const videoIframe = document.querySelector('[data-video-container]');
 
-// eslint-disable-next-line consistent-return
 const createIframe = (block) => {
   if (video !== null) {
     const iframe = document.createElement('iframe');
@@ -15,11 +14,13 @@ const createIframe = (block) => {
 
     return iframe;
   }
+
+  return false;
 };
 
 export const initPlayVideo = () => {
-  link.removeAttribute('href');
   if (video && videoIframe) {
+    link.removeAttribute('href');
     playButton.addEventListener('click', () => {
       playButton.remove();
       link.remove();
