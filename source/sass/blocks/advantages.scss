@@ -38,7 +38,7 @@
 .advantages__container ul {
   display: grid;
   grid-template-columns: 1fr 23% 1fr;
-  row-gap: 121px;
+  row-gap: 72px;
   column-gap: 58px;
   list-style-type: none;
   margin: 0;
@@ -219,7 +219,7 @@
   position: absolute;
   content: "";
   display: block;
-  top: 140%;
+  bottom: 0;
   left: 3%;
   transform: translateY(-50%);
   width: 97%;
@@ -236,7 +236,7 @@
   content: "";
   display: block;
   right: 3%;
-  top: 140%;
+  bottom: 0;
   transform: translateY(-50%);
   width: 97%;
   height: 1px;
@@ -257,7 +257,7 @@
 .advantages__item--square {
   position: relative;
   padding-left: 29px;
-  padding-bottom: 30px;
+  padding-bottom: 79px;
   grid-column: 1/2;
 
   @include vp-1199 {

@@ -1,24 +1,30 @@
-let video = document.querySelector('.gym__video');
-let videoBtn = document.querySelector('.gym__video-btn');
+const playButton = document.querySelector('.video__button');
+const link = document.querySelector('.video__link');
+const video = document.querySelector('.video');
+const videoIframe = video.querySelector('[data-video-container]');
 
-videoBtn.addEventListener('click', () => {
-  if (document.querySelector('.gym__video')) {
-    if (video.paused) {
-      video.play();
-      videoBtn.style.display = 'none';
-    } else {
-      video.pause();
-    }
-  } else {
-    videoBtn.style.display = 'none';
+// eslint-disable-next-line consistent-return
+const createIframe = (block) => {
+  if (video !== null) {
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('width', 364);
+    iframe.setAttribute('height', 228);
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', block.dataset.src);
+
+    return iframe;
   }
-});
+};
 
-function videoOnclick() {
-  video.pause();
-  videoBtn.style.display = 'block';
-}
-
-if (video) {
-  video.addEventListener('click', videoOnclick);
-}
+export const initPlayVideo = () => {
+  link.removeAttribute('href');
+  if (video && videoIframe) {
+    playButton.addEventListener('click', () => {
+      playButton.remove();
+      link.remove();
+      const newIframe = createIframe(videoIframe);
+      videoIframe.append(newIframe);
+    });
+  }
+};
