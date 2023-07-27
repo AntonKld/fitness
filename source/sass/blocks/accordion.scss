@@ -1,10 +1,10 @@
 .accordion__element {
   position: relative;
-  padding: 34px 0 28px;
+  padding: 34px 0 33px;
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 
   @include vp-1199 {
-    padding: 34px 0 29px;
+    padding: 34px 0 33px;
   }
 
   @include vp-767 {
@@ -26,42 +26,37 @@
 
 .accordion__element--wrapper {
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
-  padding: 34px 0 30px;
+  padding: 34px 0 32px;
 
   @include vp-1199 {
-    padding: 26px 0 24px;
+    padding: 25px 0 27px;
   }
 
   @include vp-767 {
-    padding: 20px 0 19px;
+    padding: 20px 0 21px;
   }
 }
 
 .accordion__element--wrapper .accordion__button {
   @include vp-1199 {
-    line-height: 120%;
+    top: 53px;
   }
 
   @include vp-767 {
-    letter-spacing: 0.1px;
+    top: 41px;
   }
 }
 
-.accordion__button {
-  position: relative;
-  justify-content: flex-start;
+.accordion__element h4 {
+  margin: 0;
+  color: $color-Sapphire;
+  text-align: left;
+  letter-spacing: 0.5px;
+  padding: 0 40px 0 0;
   font-size: 23px;
   line-height: 24px;
   font-weight: 500;
-  padding: 0 40px 0 0;
-  width: 100%;
-  color: $color-Sapphire;
-  text-align: left;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  text-transform: none;
-  letter-spacing: 0.5px;
+  font-family: $ff-roboto-condensed;
 
   @include vp-1199 {
     font-size: 24px;
@@ -75,33 +70,49 @@
     padding-right: 50px;
     letter-spacing: inherit;
   }
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: 0;
-    width: 42px;
-    height: 42px;
-    background: url("../img/sprite/accordion-open.svg") no-repeat;
+.accordion__element--wrapper h4 {
+  @include vp-1199 {
+    line-height: 113%;
+  }
+}
+
+.accordion__button {
+  position: absolute;
+  content: "";
+  top: 46px;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  background: url("../img/sprite/accordion-open.svg") no-repeat;
+  background-size: cover;
+  transform: translate(0, -50%);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  text-transform: none;
+
+  @include vp-1199 {
+    top: 46px;
+  }
+
+  @include vp-767 {
+    top: 52px;
+    width: 32px;
+    height: 32px;
     background-size: cover;
-    transform: translate(0, -50%);
-
-    @include vp-1199 {
-      top: 45%;
-    }
-
-    @include vp-767 {
-      top: 50%;
-      width: 32px;
-      height: 32px;
-      background-size: cover;
-    }
+    padding: 0;
   }
 
   @include hover-focus {
-    &::after {
-      background: url("../img/sprite/accordion-hover.svg") no-repeat;
+    background: url("../img/sprite/accordion-hover.svg") no-repeat;
+
+    @include vp-767 {
+      top: 52px;
+      width: 32px;
+      height: 32px;
+      background-size: cover;
     }
   }
 
@@ -112,19 +123,29 @@
 }
 
 .accordion__element.is-active .accordion__button {
-  &::after {
-    background: url("../img/sprite/accordion-close.svg") no-repeat;
+  top: 46px;
+  background: url("../img/sprite/accordion-close.svg") no-repeat;
 
-    @include vp-1199 {
-      top: 60%;
-    }
+  @include vp-1199 {
+    top: 46px;
+  }
 
-    @include vp-767 {
-      top: 47%;
-      width: 32px;
-      height: 32px;
-      background-size: cover;
-    }
+  @include vp-767 {
+    top: 52px;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    padding: 0;
+  }
+}
+
+.accordion__element--wrapper.is-active .accordion__button {
+  @include vp-1199 {
+    top: 53px;
+  }
+
+  @include vp-767 {
+    top: 41px;
   }
 }
 
@@ -140,6 +161,18 @@
   }
 }
 
+.accordion__button--tab3 {
+  @include vp-767 {
+    top: 41px;
+  }
+}
+
+.accordion__element.is-active .accordion__button--tab3 {
+  @include vp-767 {
+    top: 41px;
+  }
+}
+
 .accordion__text p {
   color: $color-Sapphire;
   font-family: $ff-roboto-condensed;
@@ -147,14 +180,14 @@
   font-weight: 300;
   line-height: 140%;
   margin: 0;
-  margin-top: 14px;
+  margin-top: 18px;
 
   @include vp-1199 {
-    margin-top: 13px;
+    margin-top: 18px;
   }
 
   @include vp-767 {
     font-size: 16px;
-    margin-top: 12px;
+    margin-top: 13px;
   }
 }

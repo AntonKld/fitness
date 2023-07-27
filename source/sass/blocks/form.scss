@@ -9,7 +9,11 @@
   border: 3px solid $color-default-white;
   letter-spacing: 0.7px;
   padding: 18px;
-  margin-top: 28px;
+  margin-top: 29px;
+
+  @include vp-1199 {
+    margin-top: 29px;
+  }
 
   @include vp-767 {
     margin-top: 38px;
@@ -19,6 +23,10 @@
     color: $color-egyptian-blue;
     background-color: $color-default-white;
     outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

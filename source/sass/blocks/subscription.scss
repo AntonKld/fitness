@@ -25,12 +25,12 @@
   font-weight: 600;
   letter-spacing: 1.62px;
   text-align: center;
-  margin: 0 0 33px 0;
+  margin: 0 0 32px 0;
 
   @include vp-1199 {
     font-size: 42px;
     letter-spacing: 1.26px;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
   }
 
   @include vp-767 {
@@ -43,6 +43,7 @@
 .subscription__tabs {
   margin: 0 auto;
   width: 1160px;
+  text-align: center;
 
   @include vp-1199 {
     margin: 0;
@@ -52,36 +53,37 @@
 
 .subscription__controls {
   position: relative;
-  margin: 0 0 49px;
-  display: flex;
+  margin: 0 0 40px;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 41px;
+  padding-bottom: 9px;
 
   &::after {
     position: absolute;
     content: "";
-    bottom: -10px;
-    left: 50%;
-    width: 341px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 2px;
     background-color: rgba(120, 120, 120, 0.2);
-    transform: translate(-50%, 0);
 
     @include vp-1199 {
-      left: 52%;
-      width: 316px;
-      bottom: -14px;
+      width: 100%;
     }
   }
 
   @include vp-1199 {
-    margin-bottom: 57px;
+    margin-bottom: 45px;
+    padding-bottom: 12px;
     column-gap: 55px;
+    row-gap: 15px;
   }
 
   @include vp-767 {
-    margin-bottom: 48px;
+    margin-bottom: 34px;
+    padding-bottom: 14px;
     column-gap: 45px;
     margin-right: 2px;
   }
@@ -136,11 +138,12 @@
     @include vp-1199 {
       width: calc(100% - -1px);
       left: 0;
-      bottom: -14px;
+      bottom: -13px;
     }
 
     @include vp-767 {
       width: calc(100% + 6px);
+      bottom: -14px;
     }
   }
 }
@@ -152,7 +155,7 @@
   gap: 40px;
 
   @include vp-1199 {
-    gap: 39px;
+    gap: 41px;
   }
 
   @include vp-767 {
@@ -227,7 +230,11 @@
   font-weight: 700;
   line-height: 150%;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
+
+  @include vp-1199 {
+    margin-bottom: 32px;
+  }
 
   &::before {
     content: attr(data-text);
@@ -255,7 +262,7 @@
   @include vp-767 {
     font-size: 48px;
     line-height: 48px;
-    margin-left: 5px;
+    margin-left: 2px;
     margin-bottom: 42px;
   }
 }
@@ -311,6 +318,10 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.subscription__button:active {
+  opacity: 0.3;
+}
+
 .subscription__button--disabled {
   display: inline-block;
   pointer-events: none;
@@ -344,11 +355,11 @@
   position: absolute;
   width: 286px;
   right: 0;
-  bottom: -148px;
+  bottom: -150px;
 
   @include vp-1199 {
     width: 349px;
-    bottom: -126px;
+    bottom: -128px;
   }
 
   @include vp-767 {

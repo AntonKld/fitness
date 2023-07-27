@@ -55,7 +55,7 @@
   @include vp-1199 {
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 
   @include vp-767 {
@@ -76,7 +76,8 @@
   text-transform: none;
   letter-spacing: 0.1px;
 
-  @include hover-focus {
+  &:hover,
+  &:focus-visible {
     border: 1px solid $color-Sapphire;
   }
 
@@ -94,7 +95,7 @@
 
 .faq__button.is-active {
   background: linear-gradient(151deg, $color-torch-red 0, $color-dark-blue 100%);
-  border: 0;
+  border: none;
   color: $color-default-white;
   padding: 18px 21px;
 
@@ -102,9 +103,5 @@
     font-size: 16px;
     width: 141px;
     padding: 13px 20px;
-  }
-
-  @include hover-focus {
-    border: 0;
   }
 }

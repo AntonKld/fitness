@@ -1,31 +1,41 @@
 .hero {
+  margin: 0 auto;
+  padding: 0 303px 0 122px;
   display: grid;
-  grid-template-columns: 396px 1fr;
-  column-gap: 64px;
+  grid-template-columns: 1fr 500px;
+  gap: 49px 64px;
+  max-width: 1366px;
+  color: $color-default-white;
 
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+    gap: 28px;
+    width: 750px;
+    padding: 0 37px;
   }
 
   @include vp-767 {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
     grid-template-columns: 1fr;
-    gap: unset;
+    gap: 0;
   }
 }
 
 .hero__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
+  grid-template-columns: 129px 248px;
   row-gap: 17px;
   align-self: flex-start;
   padding-top: 105px;
   color: $color-default-white;
 
   @include vp-1199 {
+    grid-template-columns: 129px 187px;
     padding-top: 57px;
+    column-gap: 8px;
     row-gap: 1px;
   }
 
@@ -33,6 +43,7 @@
     grid-template-columns: auto 290px auto;
     padding-top: 54px;
     row-gap: 12px;
+    column-gap: 0;
   }
 }
 
@@ -60,17 +71,17 @@
     font-size: 24px;
     letter-spacing: 0.84px;
     line-height: 34px;
+    grid-column: 2/3;
   }
 }
 
 .hero__wrapper h1 {
   grid-column: 2/3;
-  grid-row: 2/3;
   place-self: start end;
   margin: 0;
   font-family: $ff-alumni-sans;
   font-weight: 600;
-  font-size: 92px;
+  font-size: 93px;
   line-height: 108px;
   letter-spacing: 4.6px;
   text-align: right;
@@ -85,7 +96,9 @@
   }
 
   @include vp-767 {
-    max-width: 65%;
+    max-width: 215px;
+    grid-column: 2/3;
+    grid-row: 2/3;
     margin: 0;
   }
 }
@@ -96,11 +109,11 @@
   place-self: center start;
   margin: 0;
   padding: 0;
-  transform: translate(20px, 41px);
+  padding-top: 83px;
   list-style: none;
 
   @include vp-1199 {
-    place-self: auto;
+    place-self: baseline;
     padding-right: 3px;
     padding-top: 60px;
     transform: translate(0, 33px);
@@ -125,24 +138,25 @@
 
 .hero__button {
   grid-column: 2/3;
-  grid-row: 3/4;
   place-self: end end;
   width: 100%;
   min-height: 61px;
   max-width: 233px;
-  margin: 33px 0 0;
+  margin: 32px 0 0;
   color: $color-default-white;
 
   @include vp-1199 {
-    width: 90%;
+    width: 99%;
     margin-top: 34px;
-    margin-left: 22px;
+    margin-left: 2px;
     place-self: auto;
   }
 
   @include vp-767 {
-    max-width: unset;
+    max-width: none;
     width: 100%;
+    grid-row: 3/4;
+    grid-column: 1/4;
     margin: 0;
     margin-top: 11px;
   }

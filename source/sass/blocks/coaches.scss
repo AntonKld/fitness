@@ -197,6 +197,14 @@
   }
 }
 
+.coaches__description:hover h3 ~ * {
+  display: initial;
+}
+
+.coaches__description:focus h3 ~ * {
+  display: initial;
+}
+
 .coaches__item:hover .coaches__description h3 ~ *,
 .coaches__item:focus .coaches__description h3 ~ * {
   display: flex;

@@ -18,7 +18,7 @@
   flex-direction: column;
   color: $color-default-white;
   background-color: $color-torch-red;
-  padding: 81px 79px 85px 79px;
+  padding: 82px 79px 85px 79px;
 
   @include vp-1199 {
     padding: 48px 45px 45px 40px;
@@ -218,5 +218,6 @@
 
   &:active {
     color: $color-Sapphire;
+    background-color: $color-default-white;
   }
 }

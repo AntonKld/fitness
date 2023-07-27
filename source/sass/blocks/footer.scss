@@ -1,5 +1,4 @@
 .footer {
-  flex: 1;
   background-color: $black-russian;
 }
 
@@ -29,19 +28,23 @@
   padding: 0;
   list-style: none;
   gap: 40px;
-  padding-left: 11px;
+  row-gap: 10px;
+  padding-top: 1px;
+  padding-left: 6px;
+  max-width: 480px;
 
   @include vp-1199 {
     gap: 30px;
-    padding-left: 15px;
+    row-gap: 10px;
+    padding-left: 11px;
   }
 
   @include vp-767 {
     display: block;
     padding-left: 0;
     columns: 2;
-    margin-top: -26px;
-    margin-bottom: 17px;
+    margin-top: -27px;
+    margin-bottom: 15px;
   }
 }
 
@@ -100,12 +103,22 @@
 }
 
 .footer__socials ul {
+  width: 185px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
   gap: 11px;
+
+  @include vp-1199 {
+    width: 100px;
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+  }
 }
 
 .footer__social-link {
@@ -144,10 +157,12 @@
 }
 
 .footer__logo {
-  padding-top: 9px;
+  padding-top: 10px;
+  padding-right: 8%;
 
   @include vp-1199 {
     padding-top: 2px;
+    padding-right: 1%;
   }
 
   @include vp-767 {
