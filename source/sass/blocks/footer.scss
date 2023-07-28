@@ -12,7 +12,7 @@
   margin: 0 auto;
 
   @include vp-1199 {
-    padding: 46px 45px 42px 45px;
+    padding: 45px 45px 42px 45px;
   }
 
   @include vp-767 {
@@ -30,13 +30,13 @@
   gap: 40px;
   row-gap: 10px;
   padding-top: 1px;
-  padding-left: 6px;
+  padding-left: 5px;
   max-width: 480px;
 
   @include vp-1199 {
     gap: 30px;
     row-gap: 10px;
-    padding-left: 11px;
+    padding-left: 8px;
   }
 
   @include vp-767 {
@@ -103,17 +103,17 @@
 }
 
 .footer__socials ul {
-  width: 185px;
+  width: 97px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
   gap: 11px;
 
   @include vp-1199 {
-    width: 100px;
+    width: 97px;
   }
 
   @include vp-767 {
@@ -132,7 +132,8 @@
   border: none;
   cursor: pointer;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     background-color: $color-egyptian-blue;
     fill: $color-default-white;
     outline: none;
@@ -157,12 +158,12 @@
 }
 
 .footer__logo {
-  padding-top: 10px;
-  padding-right: 8%;
+  margin-top: 10px;
+  margin-right: 6px;
 
   @include vp-1199 {
-    padding-top: 2px;
-    padding-right: 1%;
+    margin-top: 2px;
+    margin-right: 1%;
   }
 
   @include vp-767 {

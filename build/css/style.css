@@ -1884,7 +1884,7 @@ button,
 }
 .hero__button:active {
   background-color: #ffffff;
-  color: #103aae;
+  color: #102654;
 }
 
 .hero__button--disabled {
@@ -2357,6 +2357,10 @@ button,
   }
 }
 @media (hover: hover) {
+  .subscription__control:hover:not(.focus-visible) {
+    color: #102654;
+    outline: none;
+  }
   .subscription__control:hover:not(.focus-visible)::after {
     position: absolute;
     content: "";
@@ -2366,6 +2370,10 @@ button,
     height: 2px;
     background-color: #d10a42;
   }
+}
+.subscription__control.focus-visible:focus {
+  color: #102654;
+  outline: none;
 }
 .subscription__control.focus-visible:focus::after {
   position: absolute;
@@ -2613,7 +2621,11 @@ button,
 }
 
 .subscription__button:active {
-  opacity: 0.3;
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  outline: none;
+  padding: 20px 42px 22px;
 }
 
 .subscription__button--disabled {
@@ -2979,6 +2991,7 @@ button,
 }
 
 .coaches h2 {
+  color: #102654;
   margin: 0;
   margin-bottom: 46px;
   padding: 0;
@@ -4263,6 +4276,7 @@ button,
 @media (hover: hover) {
   .accordion__button:hover:not(.focus-visible) {
     background: url("../img/sprite/accordion-hover.svg") no-repeat;
+    outline: none;
   }
 }
 @media (hover: hover) and (max-width: 767px) {
@@ -4275,6 +4289,7 @@ button,
 }
 .accordion__button.focus-visible:focus {
   background: url("../img/sprite/accordion-hover.svg") no-repeat;
+  outline: none;
 }
 @media (max-width: 767px) {
   .accordion__button.focus-visible:focus {
@@ -4518,49 +4533,28 @@ button,
 }
 
 .feedback-button {
-  padding: 5px;
+  padding: 0;
   position: absolute;
   z-index: 2;
-  stroke: #afafaf;
   width: 55px;
   height: 50px;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   fill: none;
-  top: 50%;
+  top: 48%;
 }
 @media (max-width: 1199px) {
   .feedback-button {
-    top: 52%;
+    top: 49%;
   }
 }
 @media (max-width: 767px) {
   .feedback-button {
-    width: 21px;
-    height: 27px;
-    top: 51%;
-    padding: 2px;
+    width: 32px;
+    height: 39px;
+    top: 47%;
   }
-}
-@media (hover: hover) {
-  .feedback-button:hover:not(.focus-visible) {
-    border-radius: 50%;
-    border: 2px solid #102654;
-    stroke: #102654;
-  }
-}
-.feedback-button.focus-visible:focus {
-  border-radius: 50%;
-  border: 2px solid #102654;
-  stroke: #102654;
-}
-
-.feedback-button:active {
-  stroke: #ffffff;
-  border: 2px solid #ffffff;
-  background-color: #102654;
-  border-radius: 50%;
 }
 
 .feedback-button--prev {
@@ -4571,41 +4565,46 @@ button,
 }
 @media (max-width: 767px) {
   .feedback-button--prev {
-    left: 4px;
+    left: 2px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback__svg-prev {
+    width: 32px;
+    left: 39px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback__svg-next {
+    width: 32px;
+    left: 39px;
   }
 }
 
 .feedback-button--next {
-  right: 0;
+  right: 3px;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 @media (max-width: 767px) {
   .feedback-button--next {
-    right: 4px;
+    right: 2px;
   }
-}
-
-@media (max-width: 767px) {
-  .feedback-button svg {
-    width: 10px;
-    height: 18px;
-  }
-}
-
-.feedback-button:active svg {
-  stroke: #ffffff;
 }
 
 .feedback-button--prev.swiper-button-disabled {
   border: 0;
   background-repeat: no-repeat;
   pointer-events: none;
+  opacity: 0.3;
 }
 
 .feedback-button--next.swiper-button-disabled {
   border: 0;
+  opacity: 0.3;
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -4635,6 +4634,45 @@ button,
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
+}
+
+.feedback__svg-next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.feedback__svg-circle {
+  display: none;
+}
+
+.feedback__svg-prev:hover .feedback__svg-circle,
+.feedback__svg-next:hover .feedback__svg-circle,
+.feedback__svg-prev:focus .feedback__svg-circle,
+.feedback__svg-next:focus .feedback__svg-circle {
+  display: block;
+}
+
+.feedback__svg-prev:active .feedback__svg-circle,
+.feedback__svg-next:active .feedback__svg-circle {
+  display: block;
+  fill: #102654;
+}
+
+.feedback__svg-prev:active .feedback__svg-path,
+.feedback__svg-next:active .feedback__svg-path {
+  display: block;
+  stroke: #ffffff;
+}
+
+.feedback-button:focus-visible .feedback__svg-circle {
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.feedback-button:focus {
+  outline: none;
 }
 
 .form input::-webkit-input-placeholder {
@@ -5040,7 +5078,7 @@ button,
 }
 @media (max-width: 1199px) {
   .footer__wrapper {
-    padding: 46px 45px 42px 45px;
+    padding: 45px 45px 42px 45px;
   }
 }
 @media (max-width: 767px) {
@@ -5065,14 +5103,14 @@ button,
   gap: 40px;
   row-gap: 10px;
   padding-top: 1px;
-  padding-left: 6px;
+  padding-left: 5px;
   max-width: 480px;
 }
 @media (max-width: 1199px) {
   .footer__navigation ul {
     gap: 30px;
     row-gap: 10px;
-    padding-left: 11px;
+    padding-left: 8px;
   }
 }
 @media (max-width: 767px) {
@@ -5136,15 +5174,15 @@ button,
 }
 
 .footer__socials ul {
-  width: 185px;
+  width: 97px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5152,7 +5190,7 @@ button,
 }
 @media (max-width: 1199px) {
   .footer__socials ul {
-    width: 100px;
+    width: 97px;
   }
 }
 @media (max-width: 767px) {
@@ -5180,14 +5218,7 @@ button,
   border: none;
   cursor: pointer;
 }
-@media (hover: hover) {
-  .footer__social-link:hover:not(.focus-visible) {
-    background-color: #103aae;
-    fill: #ffffff;
-    outline: none;
-  }
-}
-.footer__social-link.focus-visible:focus {
+.footer__social-link:hover, .footer__social-link:focus {
   background-color: #103aae;
   fill: #ffffff;
   outline: none;
@@ -5209,13 +5240,13 @@ button,
 }
 
 .footer__logo {
-  padding-top: 10px;
-  padding-right: 8%;
+  margin-top: 10px;
+  margin-right: 6px;
 }
 @media (max-width: 1199px) {
   .footer__logo {
-    padding-top: 2px;
-    padding-right: 1%;
+    margin-top: 2px;
+    margin-right: 1%;
   }
 }
 @media (max-width: 767px) {

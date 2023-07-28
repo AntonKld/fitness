@@ -107,6 +107,7 @@
 
   @include hover-focus {
     background: url("../img/sprite/accordion-hover.svg") no-repeat;
+    outline: none;
 
     @include vp-767 {
       top: 52px;
