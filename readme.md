@@ -1,4 +1,4 @@
-Проект можно посмотреть здесь Fitness[https://antonkld.github.io/fitness/]
+Проект можно посмотреть здесь [Fitness](https://antonkld.github.io/fitness/)
 
 
 ## Краткая инструкция по работе
